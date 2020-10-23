@@ -1,0 +1,9 @@
+@import '../../scss/variables.scss';
+
+.bird-info {
+    background-color: $colorContainer;
+    width: 540px;
+    border: 1px solid $colorBorder;
+    border-radius: 4px;
+    padding: 16px;
+}

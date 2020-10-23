@@ -1,0 +1,34 @@
+@import '../../scss/variables.scss';
+
+.end-game {
+    background-color: $colorContainer;
+    margin-top: 25px;
+    padding: 60px 40px;
+    border-radius: 4px;
+    text-align: center;
+    & p {
+        font-size: 18px;
+    }
+    & h1 {
+        font-size: 72px;
+    }
+    & hr {
+        border: 0;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        margin: 20px 0px;
+    }
+    & .btn {
+        background-color: $colorSuccess;
+        padding: 15px;
+    }
+    &__img {
+		max-width: 1030px;
+		max-height: 455px;
+	}
+	&__img img {
+		width: 100%;
+    }
+    & span {
+        font-size: 22px;
+    }
+}
