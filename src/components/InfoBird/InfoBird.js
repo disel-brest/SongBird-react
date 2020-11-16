@@ -16,17 +16,17 @@ function InfoBird(props) {
                         <img src={props.fotoBird} alt="" />
                     </div>
                     <div className='bird__details'>
-                        <div className='bird__title'><h4>{props.apiBird[props.page].list[props.id].nameRus}</h4></div>
-                        <div className='bird__view'>{props.apiBird[props.page].list[props.id].nameEng}</div>
+                        <div className='bird__title'><h4>{props.selectedBird.nameRus}</h4></div>
+                        <div className='bird__view'>{props.selectedBird.nameEng}</div>
                         <div className='bird__audio'>
                             <audio 
-                                src={props.audioBird}
+                                src={props.selectedBird.audio}
                                 controls>
                             </audio>
                         </div>
                     </div>
                 </div>
-                <div className='bird__description'>{props.apiBird[props.page].list[props.id].describe}</div>
+                <div className='bird__description'>{props.selectedBird.describe}</div>
             </div>}
         </div>
     );

@@ -14,11 +14,11 @@ function RandomBird(props) {
                     </div>
                     <div className='bird__details'>
                     {props.winRound? 
-                    <div className='bird__title'><h3>{props.randomBirdName}</h3></div>
+                    <div className='bird__title'><h3>{props.randomBird.nameRus}</h3></div>
                     :
                     <div className='bird__title'><h3>*******</h3></div>} 
                         <div className='bird__audio'>
-                            <audio src={props.randomBirdAudio} controls></audio>
+                            <audio src={props.randomBird.audio} controls></audio>
                         </div>
                     </div>
                 </div>

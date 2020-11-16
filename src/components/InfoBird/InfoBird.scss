@@ -6,4 +6,7 @@
     border: 1px solid $colorBorder;
     border-radius: 4px;
     padding: 16px;
+    @media (max-width: 1200px) {
+		width: 100%;
+	}
 }

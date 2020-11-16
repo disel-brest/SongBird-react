@@ -9,14 +9,8 @@ function Header(props) {
                 <div className="header__score">Score: {props.score}</div>
             </div>
             <ul className="header__pagination">
-                {/* <li className='active'>Разминка</li>
-                <li>Воробьиные</li>
-                <li>Лесные птицы</li>
-                <li>Певчие птицы</li>
-                <li>Хищные птицы</li>
-                <li>Морские птицы</li> */}
                 {props.apiBird.map( (item, index)=> {
-                    return index!==props.page ? <li key={item.page}>{item.type}</li> : <li key={item.page} className='active'>{item.type}</li>;
+                    return <li key={item.page} className={index===props.page?'active': ''}>{item.type}</li> 
                 })}
             </ul>
         </header>

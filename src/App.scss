@@ -21,11 +21,13 @@
         background-color: $colorSuccess;
         border: 1px solid $colorSuccess;
 	}
-	// height: 100%;      при инспекции трабл
 }
 
 .guess-bird {
     margin-top: 25px;
     display: flex;
-    justify-content: space-between;
+	justify-content: space-between;
+	@media (max-width: 1200px) {
+		display: block;
+	}
 }

@@ -1,29 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './ListBird.scss';
 
-class ListBird extends Component {
+function ListBird(props) {
+    return (
+        <ul className="bird-list">
+            {props.curentPageBirds.map(name => {
+                return <li onClick={() => props.itemSelected(name.id)}
+                    key={name.id}
+                    className={`bird-list__item ${props.checklist[name.id]}`}>
+                    <span className='li-btn'></span>
+                    {name.nameRus}
+                </li>
+            })}
+        </ul>
+    );
 
-    render(){
-        return (
-            <ul className="bird-list">
-    
-                {this.props.apiBird.map( item => {
-                    return item.page!==this.props.page ? null: item.list.map( name => {
-                        return <li onClick={()=> this.props.itemSelected(name.id)} 
-                                   key={name.id} 
-                                   className={`bird-list__item ${this.props.checklist[name.id]}`}>
-                            <span className='li-btn'></span>
-                            {name.nameRus}
-                        </li>
-                    })
-                })}
-    
-                {/* <li className='bird-list__item'>
-                        <span className='li-btn'></span>Воробей
-                    </li> */}
-            </ul>
-        );
-    }
 }
 
 export default ListBird;
